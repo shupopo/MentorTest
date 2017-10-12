@@ -9,7 +9,7 @@ class StartWeek {
 			System.out.println("入力された引数は整数ではありません。");
 			return;
 		}
-		String weekDays[] = { "日", "月", "火", "水", "木", "金", "土" };
+		final String weekDays[] = { "日", "月", "火", "水", "木", "金", "土" };
 		int displayCount = 0;
 		while (true) {
 			if (displayCount == 7) {
