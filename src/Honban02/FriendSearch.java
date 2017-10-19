@@ -4,18 +4,17 @@ import java.awt.List;
 import java.io.*;
 import java.util.*;
 
-
 public class FriendSearch {
 
 	public static void main(String[] args) throws Exception {
-		String fileName = args[0];
 		HashMap<String, String> userData = new HashMap<String, String>();
+		String fileName = args[0];
 		BufferedReader br = new BufferedReader(new FileReader(fileName));
-		String Data = br.readLine();
-		while (Data != null) {
-			String[] addingData = Data.split(",");
+		String inputData = br.readLine();
+		while (inputData != null) {
+			String[] addingData = inputData.split(",");
 			userData.put(addingData[0], addingData[1]);
-			Data = br.readLine();
+			inputData = br.readLine();
 		}
 		ArrayList<String> userMailList = new ArrayList<String>(userData.keySet());
 		while (true) {
@@ -39,4 +38,3 @@ public class FriendSearch {
 		}
 	}
 }
-
